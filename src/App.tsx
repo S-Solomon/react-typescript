@@ -10,6 +10,9 @@ import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
 
+import { ThemeContextProvider } from './components/context/ThemeContext'
+import { Box } from './components/context/Box'
+
 function App() {
   const PersonName = {
     first: 'Bruce',
@@ -44,6 +47,10 @@ function App() {
       <Button handleClick={(event, id) => {console.log('button clicked', event, id)}} />
       <Input value='' handleChange={(event) => console.log(event)} />
       <Container styles={{border: '1px solid green', padding: '1rem'}}/>
+
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }

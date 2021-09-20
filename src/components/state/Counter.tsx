@@ -47,3 +47,5 @@ export const Counter = () => {
         </>
     )
 }
+
+// Discriminated unions is the recommended way of typing reducer functions
