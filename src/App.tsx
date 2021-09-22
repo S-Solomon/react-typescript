@@ -17,6 +17,7 @@ import { UserContextProvider } from './components/context/UserContext'
 import { User } from './components/context/User'
 import { Private } from './components/auth/Private';
 import { Profile } from './components/auth/Profile';
+import { List } from './components/generics/List';
 
 function App() {
   const PersonName = {
@@ -62,6 +63,7 @@ function App() {
       </UserContextProvider>
 
       <Private isLoggedIn={true} component={Profile}/>
+      <List items={['Batman', 'Superman', 'Wonder Woman']} onClick={(item) => console.log(item)}/>
     </div>
   );
 }
